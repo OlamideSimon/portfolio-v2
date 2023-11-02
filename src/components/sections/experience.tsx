@@ -8,7 +8,7 @@ const experiences: { name: string; duration: string; role: string; link: string 
     link: '',
   },
   {
-    name: 'Silex Secure',
+    name: 'Silex Secure Labs',
     duration: 'Mar 2023 - present',
     role: 'Full-stack developer',
     link: '',
