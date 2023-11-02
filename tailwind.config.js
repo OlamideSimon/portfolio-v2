@@ -10,16 +10,12 @@ export default {
         roboto: ['Roboto', 'sans-serif'],
       },
       animation: {
-        vibrate: 'vibrate 0.5s ease infinite',
-        rotate: 'spin 50s infinite linear',
+        'infinite-scroll': 'infinite-scroll 25s linear infinite',
       },
       keyframes: {
-        vibrate: {
-          '0%': { transform: 'rotate(10deg)' },
-          '25%': { transform: 'rotate(-10deg)' },
-          '50%': { transform: 'rotate(0)' },
-          '75%': { transform: 'rotate(10deg)' },
-          '100%': { transform: 'rotate(0)' },
+        'infinite-scroll': {
+          from: { transform: 'translateX(0)' },
+          to: { transform: 'translateX(-100%)' },
         },
       },
     },
