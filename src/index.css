@@ -1,0 +1,15 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&family=Poppins:wght@100;200;300;400;500;600;700&family=Unica+One&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500;700;900&family=Young+Serif&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: Pacifico;
+  src: url('./assets/fonts/Pacifico-Regular.ttf');
+}
+
+body {
+  @apply bg-white text-black dark:bg-black dark:text-white;
+}
