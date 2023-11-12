@@ -13,8 +13,11 @@ const Skills = () => {
   return (
     <div className="w-full inline-flex flex-nowrap overflow-hidden [mask-image:_linear-gradient(to_right,transparent_0,_black_128px,_black_calc(100%-200px),transparent_100%)]">
       <ul className="skills flex items-center justify-center md:justify-start animate-infinite-scroll [&_li]:mx-8">
-        {skillsList.map(({ Icon, name }) => (
-          <li className="flex items-center space-x-1 text-slate-400 dark:text-slate-500 font-Pacifico text-3xl md:text-5xl">
+        {skillsList.map(({ Icon, name }, index) => (
+          <li
+            key={index}
+            className="flex items-center space-x-1 text-slate-400 dark:text-slate-500 font-Pacifico text-3xl md:text-5xl"
+          >
             <Icon />
             <span>{name}</span>
           </li>

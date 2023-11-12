@@ -27,8 +27,11 @@ const Experience = () => {
       <h2 className="text-3xl md:text-5xl">Professional Experience</h2>
 
       <ul>
-        {experiences.map(({ duration, name, role, link }) => (
-          <li className="py-5 flex justify-between items-center border-slate-400 border-b first:border-t">
+        {experiences.map(({ duration, name, role, link }, index) => (
+          <li
+            key={index}
+            className="py-5 flex justify-between items-center border-slate-400 border-b first:border-t"
+          >
             <p>
               <span className="text-2xl font-semibold flex space-x-1 mb-0">
                 <span>{name}</span>
