@@ -4,13 +4,13 @@ import heroImg from '../../assets/images/pexels-antonio-borriello-1297611.jpg'
 const Hero = () => {
   return (
     <section className="" id="hero">
-      <div className="text-center md:text-left space-y-3 md:space-y-0">
+      <div className="text-center lg:text-left space-y-3 lg:space-y-0">
         <h1 className="text-5xl container mx-auto md:text-7xl lg:text-9xl font-black">
           <span className="text-black/60 dark:text-white/60">Welcome</span> to my
           Portfolio, where creativity meets code.
         </h1>
         <div className="flex items-center">
-          <div className="h-[0.5px] bg-slate-600 w-full hidden md:block"></div>
+          <div className="h-[0.5px] bg-slate-600 w-full hidden lg:block"></div>
           <h6 className="text-base md:text-xl font-medium text-slate-700 dark:text-slate-200 md:px-10">
             I'm <span className="font-Pacifico text-4xl">Olamide Simon</span>, a
             passionate developer dedicated to crafting innovative solutions for a
@@ -22,7 +22,7 @@ const Hero = () => {
         </div>
       </div>
 
-      <div className="flex mt-5 md:mt-0 justify-center md:justify-normal text-2xl child:mx-5 child:flex child:space-x-1 child:items-center">
+      <div className="flex mt-5 lg:mt-0 justify-center lg:justify-normal text-2xl child:mx-5 child:flex child:space-x-1 child:items-center">
         <a href="">
           <p>Linkedin</p>
           <FiArrowUpRight />

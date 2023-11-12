@@ -1,4 +1,5 @@
 import { FiArrowRight } from 'react-icons/fi'
+import { AiOutlineArrowRight } from 'react-icons/ai'
 import image from '../../assets/images/pexels-julien-bachelet-890849.jpg'
 
 const Portfolio = () => {
@@ -36,6 +37,18 @@ const Portfolio = () => {
           link="https://testing.com"
         />
       </div>
+
+      <div className="flex justify-center text-2xl">
+        <a
+          href="https://github.com/OlamideSimon"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="flex items-center space-x-1 border border-transparent rounded-3xl p-5 dark:hover:shadow-white hover:shadow hover:border-slate-500 transition duration-500 w-fit"
+        >
+          <span>View all works</span>
+          <AiOutlineArrowRight size={20} />
+        </a>
+      </div>
     </section>
   )
 }
@@ -62,7 +75,7 @@ const PortfolioCard = ({
         <span className="text-lg !font-extralight">{type}</span>
       </p>
 
-      <a href={link} target="_blank">
+      <a href={link} rel="noopener noreferrer" target="_blank">
         <button className="py-4 px-8 border-2 border-slate-700 dark:border-slate-50 rounded-full">
           <FiArrowRight size={20} />
         </button>

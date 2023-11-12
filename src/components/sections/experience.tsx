@@ -35,7 +35,7 @@ const Experience = () => {
             <p>
               <span className="text-2xl font-semibold flex space-x-1 mb-0">
                 <span>{name}</span>
-                <a href={link} target="_blank">
+                <a href={link} rel="noopener noreferrer" target="_blank">
                   <FiExternalLink size={15} className="" />
                 </a>
               </span>
