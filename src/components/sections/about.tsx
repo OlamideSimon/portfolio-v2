@@ -1,6 +1,6 @@
 const About = () => {
   return (
-    <section className="space-y-10" id="about">
+    <section className="space-y-2" id="about">
       <h3 className="text-3xl leading-normal text-left md:text-6xl md:leading-tight">
         I'm the programmer who will enhance your digital world. With a knack for code,
         I'll elevate your projects.

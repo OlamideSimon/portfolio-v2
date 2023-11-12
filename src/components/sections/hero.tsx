@@ -1,21 +1,36 @@
+import { FiArrowUpRight } from 'react-icons/fi'
 import heroImg from '../../assets/images/pexels-antonio-borriello-1297611.jpg'
 
 const Hero = () => {
   return (
     <section className="" id="hero">
-      <div className="text-center space-y-7">
+      <div className="text-center md:text-left space-y-3 md:space-y-0">
         <h1 className="text-5xl container mx-auto md:text-7xl lg:text-9xl font-black">
           <span className="text-black/60 dark:text-white/60">Welcome</span> to my
           Portfolio, where creativity meets code.
         </h1>
-        <h6 className="text-base md:text-xl font-medium text-slate-700 dark:text-slate-200 md:px-10">
-          I'm <span className="font-Pacifico text-4xl">Olamide Simon</span>, a passionate
-          developer dedicated to crafting innovative solutions for a connected world. With
-          a focus on Frontend Development, I'm here to showcase my work and share my
-          journey in the world of code. Explore my projects, skills, and experiences, and
-          get to know the developer behind the screen. Let's build something great
-          together.
-        </h6>
+        <div className="flex items-center">
+          <div className="h-[0.5px] bg-slate-600 w-full hidden md:block"></div>
+          <h6 className="text-base md:text-xl font-medium text-slate-700 dark:text-slate-200 md:px-10">
+            I'm <span className="font-Pacifico text-4xl">Olamide Simon</span>, a
+            passionate developer dedicated to crafting innovative solutions for a
+            connected world. With a focus on Frontend Development, I'm here to showcase my
+            work and share my journey in the world of code. Explore my projects, skills,
+            and experiences, and get to know the developer behind the screen. Let's build
+            something great together.
+          </h6>
+        </div>
+      </div>
+
+      <div className="flex mt-5 md:mt-0 justify-center md:justify-normal text-2xl child:mx-5 child:flex child:space-x-1 child:items-center">
+        <a href="">
+          <p>Linkedin</p>
+          <FiArrowUpRight />
+        </a>
+        <a href="">
+          <p>GitHub</p>
+          <FiArrowUpRight />
+        </a>
       </div>
 
       <div className="h-[500px] md:h-[700px] mt-10 relative rounded-[30px] overflow-hidden">

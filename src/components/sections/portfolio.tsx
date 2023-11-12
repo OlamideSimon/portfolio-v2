@@ -54,7 +54,7 @@ const PortfolioCard = ({
   link: string
 }) => (
   <div>
-    <img className="rounded-3xl w-full max-h-[700px] object-cover" src={image} />
+    <img className="rounded-3xl w-full max-h-[400px] object-cover" src={image} />
     <div className="flex justify-between items-center mt-5 px-5">
       <p>
         <span className="font-bold text-3xl">{title}</span>
@@ -62,7 +62,7 @@ const PortfolioCard = ({
         <span className="text-lg !font-extralight">{type}</span>
       </p>
 
-      <a href={link}>
+      <a href={link} target="_blank">
         <button className="py-4 px-8 border-2 border-slate-700 dark:border-slate-50 rounded-full">
           <FiArrowRight size={20} />
         </button>
