@@ -27,8 +27,9 @@ const LightnDark = () => {
 
   return (
     <div
-      className="fixed p-2 top-10 right-10 text-3xl md:text-5xl rounded-xl cursor-pointer z-10 bg-slate-800"
+      className="fixed p-2 top-10 right-10 text-3xl md:text-5xl rounded-xl cursor-pointer z-10 bg-slate-800 focus:outline-none focus:border focus:border-white"
       onClick={toggleDarkMode}
+      tabIndex={0}
     >
       {darkMode ? (
         <HiOutlineSun aria-label="light" title="Light Mode" className="text-yellow-500" />

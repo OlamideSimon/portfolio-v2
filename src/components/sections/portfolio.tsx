@@ -76,9 +76,9 @@ const PortfolioCard = ({
       </p>
 
       <a href={link} rel="noopener noreferrer" target="_blank">
-        <button className="py-4 px-8 border-2 border-slate-700 dark:border-slate-50 rounded-full">
+        <p className="py-4 px-8 border-2 border-slate-700 dark:border-slate-50 rounded-full">
           <FiArrowRight size={20} />
-        </button>
+        </p>
       </a>
     </div>
   </div>

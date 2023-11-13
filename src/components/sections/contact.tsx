@@ -1,6 +1,28 @@
+import { ChangeEvent, FormEvent, useState } from 'react'
 import { AiOutlineArrowRight } from 'react-icons/ai'
+import emailjs from '@emailjs/browser'
 
 const Contact = () => {
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    message: '',
+  })
+
+  const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value })
+  }
+
+  const onSubmit = (e: FormEvent<HTMLFormElement>) => {
+    e.preventDefault()
+
+    emailjs.send('service_ss9udxc', 'template_5e07m9t', {
+      user_name: formData.name,
+      message: formData.message,
+      user_email: formData.email,
+    })
+  }
+
   return (
     <section>
       <div className="max-w-[650px] mx-auto text-center">
@@ -11,7 +33,7 @@ const Contact = () => {
         <p className="text-xl">Have nice works? Reach out let's chat</p>
       </div>
 
-      <form className="max-w-[900px] mx-auto my-10 space-y-10">
+      <form onSubmit={onSubmit} className="max-w-[900px] mx-auto my-10 space-y-10">
         <div className="grid gap-3">
           <label
             className="after:content-['*'] after:text-slate-400 after:ml-1"
@@ -23,6 +45,9 @@ const Contact = () => {
             id="name"
             className="outline-none pb-2 bg-transparent border-b dark:focus:border-b-white focus:border-b-black"
             placeholder="John Doe"
+            name="name"
+            value={formData.name}
+            onChange={handleChange}
           />
         </div>
         <div className="grid gap-3">
@@ -54,7 +79,10 @@ const Contact = () => {
           ></textarea>
         </div>
 
-        <button className="ml-auto flex py-5 px-10 space-x-3 items-center bg-black text-white dark:bg-white dark:text-black rounded-3xl hover:scale-105 transition-all duration-300">
+        <button
+          type="submit"
+          className="ml-auto flex py-5 px-10 space-x-3 items-center bg-black text-white dark:bg-white dark:text-black rounded-3xl hover:scale-105 transition-all duration-300"
+        >
           <span>Submit</span>
           <AiOutlineArrowRight size={20} />
         </button>
