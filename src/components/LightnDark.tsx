@@ -5,18 +5,23 @@ const LightnDark = () => {
   const [darkMode, setDarkMode] = useState(false)
 
   useEffect(() => {
-    // Check if the user's system preference is dark mode
     if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
       setDarkMode(true)
     }
+
+    const savedDarkMode = localStorage.getItem('darkMode')
+    if (savedDarkMode !== null) {
+      setDarkMode(savedDarkMode === 'true')
+    }
   }, [])
 
-  // Function to toggle dark mode
   const toggleDarkMode = () => {
-    setDarkMode(!darkMode)
+    const newDarkMode = !darkMode
+    setDarkMode(newDarkMode)
+
+    localStorage.setItem('darkMode', newDarkMode.toString())
   }
 
-  // Apply dark mode class to the body element
   useEffect(() => {
     if (darkMode) {
       document.body.classList.add('dark')
